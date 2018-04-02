@@ -1,5 +1,5 @@
 let xhr = new XMLHttpRequest;
-xhr.open('get','/files/operators.json',true);
+xhr.open('get','/files/operators_six.json',true);
 xhr.send(null);
 
 let dataArr = [];
