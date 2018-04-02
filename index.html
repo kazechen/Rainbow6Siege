@@ -1,0 +1,200 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>虹彩六號：圍攻行動》- 中文資訊</title>
+  <meta property="og:locale" content="zh_TW">
+  <meta property="article:tag" content="Rainbow Six Siege">
+  <meta property="article:tag" content="虹彩六號：圍攻行動">
+  <meta name="description" content="有關虹彩六號：圍攻行動的中文遊戲介紹、新手須知、幹員資料等遊戲資訊。">
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/R6S.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            <img src="images/r6-logo.png" title="虹彩六號：圍攻行動-中文資訊">
+            <sup>中文資訊</sup>
+          </a>
+        </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+
+        <ul class="nav nav-tabs nav-tabs-r6s" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+              <i class="glyphicon glyphicon-th"></i> 幹員列表
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#novice" aria-controls="novice" role="tab" data-toggle="tab">
+              <i class="glyphicon glyphicon-file"></i> 新手須知
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">
+              <i class="glyphicon glyphicon-info-sign"></i> 遊戲介紹 / 系統需求
+            </a>
+          </li>
+          <li role="presentation" class="hidden-md hidden-lg">
+            <a href="#external" aria-controls="external" role="tab" data-toggle="tab">
+              <i class="glyphicon glyphicon-link"></i> 相關連結
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="home">
+
+            <div id="operators">
+              <div class="title">攻方角色</div>
+              <ul class="item-inline">
+                <li v-for="item in filterPosition_ATK" class="col-xs-4 col-sm-3 col-md-2">
+                  <a href="#" :data-index="item.index" data-toggle="modal" data-target="#Modal">
+                    <!-- data-toggle="modal" data-target="#Modal" -->
+                    <div class="org" title="所屬單位">
+                      {{ item.Org }}
+                    </div>
+                    <img v-bind:src="'images/' +item.img_url + '_icon.png'"><br>
+                    <div class="name">{{ item.Nickname }}</div>
+                    <div class="name_zh" title="俗稱">{{item.Nickname_zh}}</div>
+                  </a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+              <div class="title">守方角色</div>
+              <ul class="item-inline">
+                <li v-for="item in filterPosition_DEF" class="col-xs-4 col-sm-3 col-md-2">
+                  <a href="#" :data-index="item.index" data-toggle="modal" data-target="#Modal">
+                    <div class="org" title="所屬單位">
+                      {{ item.Org }}
+                    </div>
+                    <img v-bind:src="'images/' +item.img_url + '_icon.png'"><br>
+                    {{ item.Nickname }}
+                    <div class="name_zh" title="俗稱">{{item.Nickname_zh}}</div>
+                  </a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+
+          </div>
+          <!-- tab-pane end -->
+          <div role="tabpanel" class="tab-pane" id="novice">
+            <ul>
+              <li>
+                強烈不建議購買新手版，詳細版本差異請參考這篇 <a href="https://forum.gamer.com.tw/C.php?bsn=1054&snA=4552&tnum=72" target="_blank" title="【心得】虹彩六號上市版本：入門版、標準版、進化版、黃
+金版、完全版比較">文章</a>
+              </li>
+              <li>
+                《虹彩六號：圍攻行動》非你所認知的第一人稱射擊遊戲，他是一款真正的恐怖遊戲。<br>
+              </li>
+              <li>
+                這是一款講求團隊合作的遊戲，不太適合喜歡單打獨鬥的人，最好順便推身邊的朋友一起入坑來玩。
+              </li>
+              <li>
+                新手常死得不明不白、摸索期較長，這也是為何大家說這款遊戲對新手不友善。玩起來的感覺有點類似魔物獵人，跨過了萌新的階段，你就能開始享受遊戲的樂趣。
+              </li>
+              <li>
+                在尚未熟悉整個遊戲系統和操作情況下，不建議冒然挑戰「排名戰」。
+              </li>
+              <li>
+                第三年第一季出現的全新「OUTBREAK」災變模式，這是限時的PVE模式(2018年3月6日至4月3日)，何時會再開放誰也說不準。
+              </li>
+              <li>
+                季票內容包含最新年度的特勤幹員等特典，幹員是隨每個季度更新，而非購買當下就能拿到全部8位幹員。
+              </li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="intro">
+            發行日期：2015 年 12 月 2 日
+            <hr>
+            《湯姆克蘭西之虹彩六號：圍攻行動》是第一人稱射擊遊戲，琢磨破壞與裝置使用的藝術。時時刻刻面對激烈的近距離對戰、高致死率、戰略決策、團隊合作及爆破動作。體驗從過去《湯姆克蘭西之虹彩六號》系列遊戲一脈相承的傳統中，誕生的全新激烈槍戰和專家策略世代。<br>
+            <hr>
+            遊戲平台：PC / PS4 / XBOX
+            <hr>
+            <h4>最低配備</h4>
+            作業系統: Windows 7, Windows 8.1, Windows 10 (64bit versions required)<br>
+            處理器: Intel Core i3 560 @ 3.3 GHz or AMD Phenom II X4 945 @ 3.0 GHz<br>
+            記憶體: 6 GB 記憶體<br>
+            顯示卡: NVIDIA GeForce GTX 460 or AMD Radeon HD 5870 (DirectX-11 compliant with 1GB of VRAM)
+            <hr>
+            <h4>建議配備</h4>
+            作業系統: Windows 7 SP1, Windows 8.1, Windows 10 (64bit versions required)<br>
+            處理器: Intel Core i5-2500K @ 3.3 GHz or better or AMD FX-8120 @ 3.1 Ghz or better<br>
+            記憶體: 8 GB 記憶體<br>
+            顯示卡: NVIDIA GeForce GTX 670 (or GTX 760 / GTX 960) or AMD Radeon HD 7970 (or R9 280x [2GB VRAM] / R9 380 / Fury X)
+            <hr>
+            VIA: <a href="http://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/" target="_blank">STEAM</a>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="external">
+            <!-- something -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right-side col-md-3">
+        <div class="side">
+          <div id="eSports_links" class="links-group">
+            <h4>{{title}}</h4>
+            <ul>
+              <li class="list-group-item" v-for="link in links">
+                <a :href="link.url" target="_blank">{{link.name}}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="social_links" class="links-group">
+            <h4>{{title}}</h4>
+            <ul>
+              <li class="list-group-item" v-for="link in links">
+                <a :href="link.url" target="_blank">{{link.name}}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="official_links" class="links-group">
+            <h4>{{title}}</h4>
+            <ul>
+              <li class="list-group-item" v-for="link in links">
+                <a :href="link.url" target="_blank">{{link.name}}</a>
+              </li>
+            </ul>
+          </div>
+          <hr>
+        </div>
+        <div class="text-center">
+          by <a href="https://github.com/kazechen" target="_blank">KazeChen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer hidden">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+  <script src="js/R6S.js"></script>
+</body>
+</html>
