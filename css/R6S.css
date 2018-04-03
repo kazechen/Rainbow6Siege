@@ -142,6 +142,7 @@ body {
 }
 
 #novice ul {
+  padding-left: 30px;
   list-style: decimal-leading-zero;
 }
 #novice ul li {
