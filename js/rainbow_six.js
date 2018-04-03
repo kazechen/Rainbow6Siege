@@ -147,14 +147,13 @@ $(function(){
   $(window).resize(function() {
     sideView()
   });
+});
 
-  $(window).scroll(function(event) {
-    /* Act on the event */
-    if($(this).scrollTop() > 80) {
-      $('.go-top a').fadeIn();
-    } else {
-      $('.go-top a').fadeOut(800);
-    }
-  });
-
+$(window).scroll(function(event) {
+  /* Act on the event */
+  if($(this).scrollTop() > 80) {
+    $('.go-top a').fadeIn();
+  } else {
+    $('.go-top a').fadeOut(800);
+  }
 });
