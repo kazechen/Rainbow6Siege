@@ -11,7 +11,7 @@
  
 <hr>
  ## 技術使用
-  1. 使用 Vue 框架
-  2. 使用 Bootstrap 框架
-  3. 使用 JSON 取得幹員資料
-  4. 使用 SASS、jQuery
+ 1. 使用 Vue 框架
+ 2. 使用 Bootstrap 框架
+ 3. 使用 JSON 取得幹員資料
+ 4. 使用 SASS、jQuery
